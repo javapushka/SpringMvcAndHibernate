@@ -56,7 +56,7 @@ public class DatabaseConfig {
     public PlatformTransactionManager jpaTransactionManager() {
         JpaTransactionManager manager = new JpaTransactionManager();
         manager.setEntityManagerFactory(entityManagerFactoryBean().getObject());
-//        manager.setDataSource(getDataSource());
+        manager.setDataSource(getDataSource());
         return manager;
     }
 
