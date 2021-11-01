@@ -9,7 +9,9 @@ import javax.servlet.ServletException;
 public class WebAppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return null;
+        return new Class<?>[]{
+                WebConfig.class
+        };
     }
 
     @Override
@@ -33,6 +35,6 @@ public class WebAppInit extends AbstractAnnotationConfigDispatcherServletInitial
 
     private void registerHiddenFieldFilter(ServletContext aContext) {
         aContext.addFilter("hiddenHttpMethodFilter",
-                new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null ,true, "/*");
+                new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true, "/*");
     }
 }
