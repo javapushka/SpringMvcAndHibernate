@@ -10,7 +10,6 @@ import spring_mvc_and_hiber.models.Role;
 import spring_mvc_and_hiber.models.User;
 import spring_mvc_and_hiber.services.UserService;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
